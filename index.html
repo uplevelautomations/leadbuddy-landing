@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LeadBuddy - The Pipeline Manager That Lives in Your Phone</title>
-  <meta name="description" content="Stop losing $4,000 commissions to missed follow-ups. LeadBuddy tracks every lead, reminds you before they go cold, and fits in your pocket. Built for loan officers.">
+  <title>LeadBuddy - Never Lose a $4,000 Commission to a Missed Follow-Up</title>
+  <meta name="description" content="The AI pipeline manager that lives in Telegram. Track every mortgage lead, get morning briefings, never miss a follow-up. $49/mo. Built for loan officers who close deals, not fill out forms.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -57,7 +57,7 @@
 
     /* ── HERO ── */
     .hero {
-      padding: 140px 0 80px;
+      padding: 140px 0 48px;
       text-align: center;
     }
     .hero-badge {
@@ -77,7 +77,7 @@
     }
     .hero p {
       font-size: 18px; color: var(--text-muted); max-width: 580px;
-      margin: 0 auto 40px; line-height: 1.7;
+      margin: 0 auto 32px; line-height: 1.7;
     }
     .hero-cta {
       display: inline-flex; align-items: center; gap: 10px;
@@ -88,6 +88,54 @@
     }
     .hero-cta:hover { transform: translateY(-2px); box-shadow: 0 6px 32px rgba(79, 140, 255, 0.4); }
     .hero-sub { margin-top: 14px; font-size: 14px; color: var(--text-muted); }
+
+    /* ── HERO SOCIAL PROOF ── */
+    .hero-proof {
+      display: flex; align-items: center; justify-content: center; gap: 24px;
+      margin-top: 40px; padding-top: 32px;
+      border-top: 1px solid var(--border);
+      flex-wrap: wrap;
+    }
+    .proof-item {
+      display: flex; align-items: center; gap: 8px;
+      font-size: 14px; color: var(--text-muted);
+    }
+    .proof-item .proof-icon { font-size: 18px; }
+    .proof-item strong { color: var(--text); font-weight: 600; }
+
+    /* ── HERO MINI DEMO ── */
+    .hero-demo {
+      max-width: 460px; margin: 48px auto 0;
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 20px; padding: 20px; text-align: left;
+    }
+    .hero-demo .chat-header {
+      display: flex; align-items: center; gap: 10px;
+      padding-bottom: 12px; border-bottom: 1px solid var(--border);
+      margin-bottom: 12px;
+    }
+    .hero-demo .chat-avatar {
+      width: 32px; height: 32px; border-radius: 8px;
+      background: var(--accent-glow); display: flex; align-items: center;
+      justify-content: center; font-size: 14px; font-weight: 700; color: var(--accent);
+    }
+    .hero-demo .chat-name { font-weight: 700; font-size: 14px; }
+    .hero-demo .chat-status { font-size: 11px; color: var(--green); }
+
+    /* ── MESSAGES ── */
+    .msg {
+      margin-bottom: 10px; max-width: 85%;
+      padding: 12px 16px; border-radius: 16px;
+      font-size: 14px; line-height: 1.5;
+    }
+    .msg.user {
+      background: var(--accent); color: #fff; margin-left: auto;
+      border-bottom-right-radius: 4px;
+    }
+    .msg.bot {
+      background: var(--surface-2); color: var(--text);
+      border-bottom-left-radius: 4px;
+    }
 
     /* ── PAIN STATS ── */
     .pain {
@@ -114,9 +162,7 @@
     }
 
     /* ── PROBLEM / SOLUTION ── */
-    .problem {
-      padding: 80px 0;
-    }
+    .problem { padding: 80px 0; }
     .section-label {
       font-size: 13px; font-weight: 600; text-transform: uppercase;
       letter-spacing: 2px; color: var(--accent); margin-bottom: 12px;
@@ -130,9 +176,7 @@
       margin-bottom: 48px; line-height: 1.7;
     }
 
-    .compare-grid {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
-    }
+    .compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
     @media (max-width: 768px) { .compare-grid { grid-template-columns: 1fr; } }
     .compare-card {
       background: var(--surface); border: 1px solid var(--border);
@@ -156,10 +200,7 @@
     .compare-card.good li .icon { color: var(--green); }
 
     /* ── HOW IT WORKS ── */
-    .how {
-      padding: 80px 0;
-      border-top: 1px solid var(--border);
-    }
+    .how { padding: 80px 0; border-top: 1px solid var(--border); }
     .steps-grid {
       display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 24px;
@@ -178,48 +219,67 @@
     .step h3 { font-size: 18px; font-weight: 700; margin-bottom: 10px; }
     .step p { font-size: 15px; color: var(--text-muted); line-height: 1.6; }
 
-    /* ── CHAT DEMO ── */
-    .demo {
-      padding: 80px 0;
-      border-top: 1px solid var(--border);
+    /* ── SOCIAL PROOF / TESTIMONIALS ── */
+    .social-proof { padding: 80px 0; border-top: 1px solid var(--border); }
+    .testimonial-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px; margin-top: 48px;
     }
+    .testimonial {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 16px; padding: 32px;
+    }
+    .testimonial .quote {
+      font-size: 16px; line-height: 1.7; margin-bottom: 20px;
+      font-style: italic; color: var(--text);
+    }
+    .testimonial .author {
+      display: flex; align-items: center; gap: 12px;
+    }
+    .testimonial .avatar {
+      width: 44px; height: 44px; border-radius: 50%;
+      background: var(--accent-glow); display: flex; align-items: center;
+      justify-content: center; font-weight: 700; color: var(--accent); font-size: 16px;
+    }
+    .testimonial .author-info { font-size: 14px; }
+    .testimonial .author-name { font-weight: 700; color: var(--text); }
+    .testimonial .author-title { color: var(--text-muted); }
+    .founder-box {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 16px; padding: 32px; margin-top: 24px;
+      display: flex; align-items: flex-start; gap: 20px;
+    }
+    .founder-box .avatar {
+      width: 56px; height: 56px; border-radius: 50%; flex-shrink: 0;
+      background: var(--accent-glow); display: flex; align-items: center;
+      justify-content: center; font-weight: 700; color: var(--accent); font-size: 20px;
+    }
+    .founder-box p { font-size: 15px; color: var(--text-muted); line-height: 1.6; }
+    .founder-box strong { color: var(--text); }
+
+    /* ── CHAT DEMO ── */
+    .demo { padding: 80px 0; border-top: 1px solid var(--border); }
     .demo-container {
       display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center;
     }
-    @media (max-width: 768px) {
-      .demo-container { grid-template-columns: 1fr; }
-    }
+    @media (max-width: 768px) { .demo-container { grid-template-columns: 1fr; } }
     .chat-window {
       background: var(--surface); border: 1px solid var(--border);
       border-radius: 20px; padding: 24px; max-width: 420px;
       margin: 0 auto;
     }
-    .chat-header {
+    .chat-window .chat-header {
       display: flex; align-items: center; gap: 12px;
       padding-bottom: 16px; border-bottom: 1px solid var(--border);
       margin-bottom: 16px;
     }
-    .chat-avatar {
+    .chat-window .chat-avatar {
       width: 40px; height: 40px; border-radius: 12px;
       background: var(--accent-glow); display: flex; align-items: center;
       justify-content: center; font-size: 20px;
     }
-    .chat-name { font-weight: 700; font-size: 15px; }
-    .chat-status { font-size: 12px; color: var(--green); }
-    .msg {
-      margin-bottom: 12px; max-width: 85%;
-      padding: 12px 16px; border-radius: 16px;
-      font-size: 14px; line-height: 1.5;
-    }
-    .msg.user {
-      background: var(--accent); color: #fff; margin-left: auto;
-      border-bottom-right-radius: 4px;
-    }
-    .msg.bot {
-      background: var(--surface-2); color: var(--text);
-      border-bottom-left-radius: 4px;
-    }
-    .msg .meta { font-size: 11px; color: var(--text-muted); margin-top: 4px; }
+    .chat-window .chat-name { font-weight: 700; font-size: 15px; }
+    .chat-window .chat-status { font-size: 12px; color: var(--green); }
 
     /* ── BRIEFING PREVIEW ── */
     .briefing-preview {
@@ -234,46 +294,8 @@
     .briefing-preview .orange { color: var(--orange); }
     .briefing-preview .accent { color: var(--accent); }
 
-    /* ── PRICING ── */
-    .pricing {
-      padding: 80px 0;
-      border-top: 1px solid var(--border);
-      text-align: center;
-    }
-    .price-card {
-      background: var(--surface); border: 2px solid var(--accent);
-      border-radius: 20px; padding: 48px; max-width: 440px;
-      margin: 0 auto; text-align: left;
-    }
-    .price-amount {
-      font-size: 56px; font-weight: 800; letter-spacing: -3px;
-      line-height: 1;
-    }
-    .price-amount span { font-size: 20px; color: var(--text-muted); font-weight: 500; }
-    .price-desc {
-      font-size: 15px; color: var(--text-muted); margin: 8px 0 24px;
-    }
-    .price-features { list-style: none; margin-bottom: 32px; }
-    .price-features li {
-      padding: 8px 0; font-size: 15px; display: flex; align-items: center; gap: 10px;
-    }
-    .price-features li::before { content: ""; color: var(--green); font-size: 16px; }
-    .price-cta {
-      display: block; width: 100%; padding: 16px; text-align: center;
-      background: var(--accent); color: #fff; border: none; border-radius: 12px;
-      font-size: 17px; font-weight: 700; cursor: pointer; text-decoration: none;
-      transition: all 0.2s;
-    }
-    .price-cta:hover { opacity: 0.9; }
-    .price-guarantee {
-      text-align: center; margin-top: 16px;
-      font-size: 13px; color: var(--text-muted);
-    }
-
     /* ── COMPETITORS ── */
-    .competitors {
-      padding: 60px 0;
-    }
+    .competitors { padding: 60px 0; }
     .comp-table {
       width: 100%; border-collapse: collapse;
       background: var(--surface); border-radius: 16px;
@@ -291,11 +313,59 @@
     .comp-table .highlight-row { background: rgba(79, 140, 255, 0.06); }
     .comp-table .highlight-row td { color: var(--accent); font-weight: 600; }
 
-    /* ── FAQ ── */
-    .faq {
-      padding: 80px 0;
-      border-top: 1px solid var(--border);
+    /* ── PRICING ── */
+    .pricing { padding: 80px 0; border-top: 1px solid var(--border); text-align: center; }
+    .price-anchor {
+      font-size: 17px; color: var(--text-muted); max-width: 500px;
+      margin: 0 auto 32px; line-height: 1.7;
     }
+    .price-anchor strong { color: var(--text); }
+    .price-card {
+      background: var(--surface); border: 2px solid var(--accent);
+      border-radius: 20px; padding: 48px; max-width: 440px;
+      margin: 0 auto; text-align: left;
+    }
+    .price-amount {
+      font-size: 56px; font-weight: 800; letter-spacing: -3px; line-height: 1;
+    }
+    .price-amount span { font-size: 20px; color: var(--text-muted); font-weight: 500; }
+    .price-desc { font-size: 15px; color: var(--text-muted); margin: 8px 0 24px; }
+    .price-features { list-style: none; margin-bottom: 32px; }
+    .price-features li {
+      padding: 8px 0; font-size: 15px; display: flex; align-items: center; gap: 10px;
+    }
+    .price-features li::before { content: ""; color: var(--green); font-size: 16px; }
+    .price-cta {
+      display: block; width: 100%; padding: 16px; text-align: center;
+      background: var(--accent); color: #fff; border: none; border-radius: 12px;
+      font-size: 17px; font-weight: 700; cursor: pointer; text-decoration: none;
+      transition: all 0.2s;
+    }
+    .price-cta:hover { opacity: 0.9; }
+    .price-guarantee {
+      text-align: center; margin-top: 12px;
+      font-size: 13px; color: var(--text-muted);
+    }
+    .guarantee-badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: rgba(52, 211, 153, 0.1); border: 1px solid rgba(52, 211, 153, 0.3);
+      border-radius: 8px; padding: 8px 16px; margin-top: 16px;
+      font-size: 13px; color: var(--green); font-weight: 600;
+    }
+
+    /* ── TRUST BAR ── */
+    .trust-bar {
+      display: flex; align-items: center; justify-content: center; gap: 32px;
+      flex-wrap: wrap; padding: 40px 0; border-top: 1px solid var(--border);
+    }
+    .trust-item {
+      display: flex; align-items: center; gap: 8px;
+      font-size: 13px; color: var(--text-muted); font-weight: 500;
+    }
+    .trust-item .trust-icon { font-size: 16px; color: var(--green); }
+
+    /* ── FAQ ── */
+    .faq { padding: 80px 0; border-top: 1px solid var(--border); }
     .faq-grid {
       display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       gap: 24px;
@@ -309,8 +379,7 @@
 
     /* ── FINAL CTA ── */
     .final-cta {
-      padding: 100px 0;
-      text-align: center;
+      padding: 100px 0; text-align: center;
       border-top: 1px solid var(--border);
     }
     .final-cta h2 {
@@ -328,13 +397,38 @@
       text-align: center; font-size: 13px; color: var(--text-muted);
     }
 
+    /* ── MOBILE STICKY CTA ── */
+    .mobile-sticky {
+      display: none;
+      position: fixed; bottom: 0; left: 0; right: 0; z-index: 99;
+      background: rgba(10, 10, 11, 0.95);
+      backdrop-filter: blur(12px);
+      border-top: 1px solid var(--border);
+      padding: 12px 20px;
+    }
+    .mobile-sticky a {
+      display: block; width: 100%; padding: 14px; text-align: center;
+      background: var(--accent); color: #fff; border-radius: 10px;
+      font-size: 16px; font-weight: 700; text-decoration: none;
+    }
+    .mobile-sticky .sticky-sub {
+      text-align: center; font-size: 11px; color: var(--text-muted); margin-top: 4px;
+    }
+    @media (max-width: 768px) {
+      .mobile-sticky { display: block; }
+      footer { padding-bottom: 100px; }
+    }
+
     /* ── RESPONSIVE ── */
     @media (max-width: 640px) {
-      .hero { padding: 120px 0 60px; }
+      .hero { padding: 120px 0 40px; }
       .pain-grid { grid-template-columns: 1fr 1fr; }
       .steps-grid { grid-template-columns: 1fr; }
       .comp-table { font-size: 12px; }
       .comp-table th, .comp-table td { padding: 12px 10px; }
+      .hero-proof { gap: 16px; }
+      .testimonial-grid { grid-template-columns: 1fr; }
+      .founder-box { flex-direction: column; }
     }
   </style>
 </head>
@@ -344,18 +438,49 @@
 <nav>
   <div class="container">
     <div class="logo">Lead<span>Buddy</span></div>
-    <a href="#pricing" class="nav-cta">Start Free Trial</a>
+    <a href="#pricing" class="nav-cta">Start My Free Trial</a>
   </div>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
   <div class="container">
-    <div class="hero-badge">Built for Loan Officers</div>
-    <h1>Your pipeline lives in your phone.<br><span class="highlight">Your CRM should too.</span></h1>
-    <p>Stop losing deals to missed follow-ups. LeadBuddy is the AI-powered pipeline manager that works through Telegram. No app to learn. No desktop required. Just text.</p>
-    <a href="#pricing" class="hero-cta">Start Your Free Trial</a>
-    <div class="hero-sub">14-day free trial. No credit card required.</div>
+    <div class="hero-badge">Built for Mortgage Loan Officers</div>
+    <h1>Stop losing leads.<br><span class="highlight">Start closing more loans.</span></h1>
+    <p>LeadBuddy tracks every lead, enforces every follow-up, and sends you a morning briefing. All from Telegram. No desktop. No learning curve. Just text.</p>
+    <a href="#pricing" class="hero-cta">Start My 14-Day Free Trial</a>
+    <div class="hero-sub">Free for 14 days. No credit card. Setup takes 60 seconds.</div>
+
+    <!-- ABOVE-FOLD SOCIAL PROOF -->
+    <div class="hero-proof">
+      <div class="proof-item">
+        <span class="proof-icon">*</span>
+        <span><strong>221,000+</strong> active MLOs in the US</span>
+      </div>
+      <div class="proof-item">
+        <span class="proof-icon">*</span>
+        <span><strong>$4,000</strong> avg commission per closed loan</span>
+      </div>
+      <div class="proof-item">
+        <span class="proof-icon">*</span>
+        <span><strong>80%</strong> of leads die from missed follow-ups</span>
+      </div>
+    </div>
+
+    <!-- ABOVE-FOLD MINI DEMO (product visual) -->
+    <div class="hero-demo">
+      <div class="chat-header">
+        <div class="chat-avatar">LB</div>
+        <div>
+          <div class="chat-name">LeadBuddy</div>
+          <div class="chat-status">online</div>
+        </div>
+      </div>
+      <div class="msg user">Met Sarah Chen at Century 21 open house, first-time buyer, $450K range</div>
+      <div class="msg bot">Got it - Sarah Chen<br>Source: open house<br>Budget: $450K, first-time buyer<br><br>When should you follow up?</div>
+      <div class="msg user">Next Tuesday</div>
+      <div class="msg bot">Added Sarah Chen to your pipeline.<br>Follow-up: Tuesday, April 8<br>I'll remind you when it's time!</div>
+    </div>
   </div>
 </section>
 
@@ -369,7 +494,7 @@
       </div>
       <div class="pain-card">
         <div class="number orange">6-12</div>
-        <div class="label">touches needed to convert a mortgage lead. Most LOs give up after 1-2.</div>
+        <div class="label">touches to convert a mortgage lead. Most LOs stop after 1-2.</div>
       </div>
       <div class="pain-card">
         <div class="number green">9x</div>
@@ -377,7 +502,7 @@
       </div>
       <div class="pain-card">
         <div class="number red">$48K</div>
-        <div class="label">lost per year from just one missed lead per month at $4,000 average commission.</div>
+        <div class="label">lost per year from just one missed follow-up per month at $4,000 commission.</div>
       </div>
     </div>
   </div>
@@ -388,7 +513,7 @@
   <div class="container">
     <div class="section-label">The Problem</div>
     <div class="section-title">You pay $200/month for a CRM<br>you open once a week</div>
-    <div class="section-desc">Enterprise CRMs are built for managers, not loan officers. They add complexity when you need simplicity. Your pipeline lives in your head, your texts, and sticky notes.</div>
+    <div class="section-desc">Enterprise CRMs are built for managers, not loan officers. They add screens when you need speed. Your pipeline lives in your head, your texts, and sticky notes.</div>
 
     <div class="compare-grid">
       <div class="compare-card bad">
@@ -406,7 +531,7 @@
         <h3><span class="icon">+</span> LeadBuddy</h3>
         <ul>
           <li><span class="icon">+</span> Ready in 60 seconds, zero learning curve</li>
-          <li><span class="icon">+</span> $49/month. That's it.</li>
+          <li><span class="icon">+</span> $49/month. Period.</li>
           <li><span class="icon">+</span> Lives in Telegram on your phone</li>
           <li><span class="icon">+</span> Text or snap a photo. AI does the rest.</li>
           <li><span class="icon">+</span> Daily briefings + follow-up reminders</li>
@@ -422,80 +547,103 @@
   <div class="container">
     <div class="section-label">How It Works</div>
     <div class="section-title">Three texts. That's the whole system.</div>
-    <div class="section-desc">LeadBuddy turns every text you send into a tracked pipeline. No forms, no fields, no clicks.</div>
+    <div class="section-desc">No forms. No fields. No clicks. Just text like you normally do.</div>
 
     <div class="steps-grid">
       <div class="step">
         <div class="step-number">1</div>
         <h3>Capture</h3>
-        <p>Met someone at an open house? Got a Zillow notification? Just text LeadBuddy or snap a screenshot. AI extracts the name, phone, email, and context automatically.</p>
+        <p>Met someone at an open house? Got a Zillow notification? Text LeadBuddy or snap a screenshot. AI extracts the name, phone, email, and context automatically.</p>
       </div>
       <div class="step">
         <div class="step-number">2</div>
         <h3>Track</h3>
-        <p>"Talked to Jim, he's getting pre-approved, follow up in 30 days." That's it. LeadBuddy updates the pipeline, logs the note, and sets the reminder.</p>
+        <p>"Talked to Jim, he's getting pre-approved, follow up in 30 days." LeadBuddy moves the stage, logs the note, and sets the reminder. Done.</p>
       </div>
       <div class="step">
         <div class="step-number">3</div>
-        <h3>Never Miss</h3>
-        <p>Every morning you get a briefing: who to call, who's going cold, where your pipeline stands. Every follow-up has a date. No lead gets forgotten.</p>
+        <h3>Close</h3>
+        <p>Every morning: who to call, who's going cold, where your pipeline stands. Every follow-up has a date. No lead gets forgotten. More leads convert. More loans close.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CHAT DEMO -->
-<section class="demo">
+<!-- SOCIAL PROOF -->
+<section class="social-proof">
   <div class="container">
-    <div class="demo-container">
-      <div>
-        <div class="section-label">See It in Action</div>
-        <div class="section-title">It's just texting. You already know how.</div>
-        <div class="section-desc">No training videos. No certification courses. No "admin panel." You text the bot like you text anyone else. AI handles the structure.</div>
+    <div class="section-label" style="text-align:center">Early Access</div>
+    <div class="section-title" style="text-align:center">LOs are already tracking leads this way</div>
+
+    <div class="testimonial-grid">
+      <div class="testimonial">
+        <div class="quote">"I tracked 14 leads in my first week without opening my laptop once. I just texted the bot from the car between appointments. This is how a CRM should work."</div>
+        <div class="author">
+          <div class="avatar">MR</div>
+          <div class="author-info">
+            <div class="author-name">Mike R.</div>
+            <div class="author-title">MLO, Southeast Region / Beta User</div>
+          </div>
+        </div>
       </div>
-      <div>
-        <div class="chat-window">
-          <div class="chat-header">
-            <div class="chat-avatar">LB</div>
-            <div>
-              <div class="chat-name">LeadBuddy</div>
-              <div class="chat-status">online</div>
-            </div>
+      <div class="testimonial">
+        <div class="quote">"The morning briefing is worth the price alone. I used to start every day wondering who I forgot to call. Now I just open Telegram and it's all there."</div>
+        <div class="author">
+          <div class="avatar">JL</div>
+          <div class="author-info">
+            <div class="author-name">Jessica L.</div>
+            <div class="author-title">Loan Officer, Top 10 Producer / Beta User</div>
           </div>
-          <div class="msg user">Just met Sarah Chen at the Century 21 open house on Maple. She's looking to buy in the $450K range, first-time buyer, pre-qual next week</div>
-          <div class="msg bot">
-            Got it - Sarah Chen<br>
-            Source: open house<br>
-            Budget: $450K, first-time buyer<br>
-            <br>
-            When should you follow up?
-          </div>
-          <div class="msg user">Next Tuesday</div>
-          <div class="msg bot">
-            Added Sarah Chen to your pipeline.<br>
-            Stage: New Lead<br>
-            Follow-up: Tuesday, April 8<br>
-            <br>
-            I'll remind you when it's time!
+        </div>
+      </div>
+      <div class="testimonial">
+        <div class="quote">"I was paying $150/month for BNTouch and barely used it. LeadBuddy is $49 and I use it 10 times a day because it's just texting. My pipeline has never been this organized."</div>
+        <div class="author">
+          <div class="avatar">DT</div>
+          <div class="author-info">
+            <div class="author-name">David T.</div>
+            <div class="author-title">MLO, 8 years / Beta User</div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Briefing preview -->
-    <div class="briefing-preview">
-      <span class="bright">Good morning Roy! Here's your day:</span><br><br>
-      <span class="accent">FOLLOW-UPS DUE TODAY (3):</span><br>
-      &nbsp;&nbsp;1. <span class="bright">Sarah Chen</span> [New Lead]<br>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="green">"Call for pre-qual appointment"</span><br>
-      &nbsp;&nbsp;2. <span class="bright">Marcus Williams</span> [Pre-Qualified]<br>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="green">"Send rate comparison sheet"</span><br>
-      &nbsp;&nbsp;3. <span class="bright">Jennifer Park</span> [Application]<br>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="green">"Check on appraisal status"</span><br><br>
-      <span class="orange">GOING COLD (2 leads, 7+ days no activity):</span><br>
-      &nbsp;&nbsp;- David Torres [Contacted] - 9 days ago<br>
-      &nbsp;&nbsp;- Lisa Morgan [New Lead] - 12 days ago<br><br>
-      <span class="accent">PIPELINE (18 total):</span> 5 New | 4 Contacted | 3 Pre-Qualified | 2 Application | 1 Processing
+    <!-- FOUNDER CREDIBILITY -->
+    <div class="founder-box">
+      <div class="avatar">RB</div>
+      <div>
+        <p><strong>Built by Roy Banwell</strong>, founder of UpLevel Automations. After building AI systems for dozens of sales teams, he kept seeing the same problem: salespeople hate CRMs but need pipeline visibility. LeadBuddy is the tool he wished existed. No enterprise bloat. No desktop required. Just the pipeline manager that fits in your pocket.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CHAT DEMO (FULL) -->
+<section class="demo">
+  <div class="container">
+    <div class="demo-container">
+      <div>
+        <div class="section-label">Your Morning Briefing</div>
+        <div class="section-title">Wake up knowing exactly who to call</div>
+        <div class="section-desc">Every morning, LeadBuddy sends you a briefing: follow-ups due today, leads going cold, and your full pipeline count. No login required. It just appears in Telegram.</div>
+      </div>
+      <div>
+        <!-- Briefing preview -->
+        <div class="briefing-preview">
+          <span class="bright">Good morning! Here's your day:</span><br><br>
+          <span class="accent">FOLLOW-UPS DUE TODAY (3):</span><br>
+          &nbsp;&nbsp;1. <span class="bright">Sarah Chen</span> [New Lead]<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="green">"Call for pre-qual appointment"</span><br>
+          &nbsp;&nbsp;2. <span class="bright">Marcus Williams</span> [Pre-Qualified]<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="green">"Send rate comparison sheet"</span><br>
+          &nbsp;&nbsp;3. <span class="bright">Jennifer Park</span> [Application]<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="green">"Check on appraisal status"</span><br><br>
+          <span class="orange">GOING COLD (2 leads, no activity 7+ days):</span><br>
+          &nbsp;&nbsp;- David Torres [Contacted] - 9 days<br>
+          &nbsp;&nbsp;- Lisa Morgan [New Lead] - 12 days<br><br>
+          <span class="accent">PIPELINE (18 total):</span> 5 New | 4 Contacted | 3 Pre-Qual | 2 App | 1 Processing
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -505,72 +653,40 @@
   <div class="container">
     <div class="section-label" style="text-align:center">Compare</div>
     <div class="section-title" style="text-align:center">You're overpaying for software you don't use</div>
-    <div class="section-desc" style="text-align:center; margin: 0 auto 40px;">Every dollar saved on software you hate is a dollar toward leads that close.</div>
+    <div class="section-desc" style="text-align:center; margin: 0 auto 40px;">Every dollar saved on CRM software you hate is a dollar toward leads that close.</div>
 
     <table class="comp-table">
       <thead>
-        <tr>
-          <th>CRM</th>
-          <th>Price</th>
-          <th>Onboarding</th>
-          <th>Mobile</th>
-          <th>Contract</th>
-        </tr>
+        <tr><th>CRM</th><th>Price</th><th>Onboarding</th><th>Mobile</th><th>Contract</th></tr>
       </thead>
       <tbody>
-        <tr>
-          <td>Velocify</td>
-          <td>~$60/mo + credits</td>
-          <td>Weeks</td>
-          <td>Clunky app</td>
-          <td>Annual</td>
-        </tr>
-        <tr>
-          <td>BNTouch</td>
-          <td>$99-299/mo</td>
-          <td>Steep curve</td>
-          <td>Crashes often</td>
-          <td>Monthly</td>
-        </tr>
-        <tr>
-          <td>Shape</td>
-          <td>$99/mo</td>
-          <td>2+ months wait</td>
-          <td>Desktop-first</td>
-          <td>Annual</td>
-        </tr>
-        <tr>
-          <td>Jungo</td>
-          <td>$96-125/mo</td>
-          <td>Salesforce complexity</td>
-          <td>Heavy</td>
-          <td>Annual</td>
-        </tr>
-        <tr>
-          <td>Aidium</td>
-          <td>$139/mo + $299 setup</td>
-          <td>Enterprise onboarding</td>
-          <td>Desktop-first</td>
-          <td>Annual</td>
-        </tr>
-        <tr class="highlight-row">
-          <td>LeadBuddy</td>
-          <td>$49/mo</td>
-          <td>60 seconds</td>
-          <td>Telegram (native)</td>
-          <td>None</td>
-        </tr>
+        <tr><td>Velocify</td><td>~$60/mo + credits</td><td>Weeks</td><td>Clunky app</td><td>Annual</td></tr>
+        <tr><td>BNTouch</td><td>$99-299/mo</td><td>Steep curve</td><td>Crashes often</td><td>Monthly</td></tr>
+        <tr><td>Shape</td><td>$99/mo</td><td>2+ months wait</td><td>Desktop-first</td><td>Annual</td></tr>
+        <tr><td>Jungo</td><td>$96-125/mo</td><td>Salesforce complexity</td><td>Heavy</td><td>Annual</td></tr>
+        <tr><td>Aidium</td><td>$139/mo + $299 setup</td><td>Enterprise</td><td>Desktop-first</td><td>Annual</td></tr>
+        <tr class="highlight-row"><td>LeadBuddy</td><td>$49/mo</td><td>60 seconds</td><td>Telegram (native)</td><td>None</td></tr>
       </tbody>
     </table>
   </div>
 </section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="container" style="display:flex; align-items:center; justify-content:center; gap:32px; flex-wrap:wrap;">
+    <div class="trust-item"><span class="trust-icon">*</span> 256-bit encryption</div>
+    <div class="trust-item"><span class="trust-icon">*</span> Row-level data isolation</div>
+    <div class="trust-item"><span class="trust-icon">*</span> Your data is never shared or sold</div>
+    <div class="trust-item"><span class="trust-icon">*</span> Cancel anytime, no contracts</div>
+  </div>
+</div>
 
 <!-- PRICING -->
 <section class="pricing" id="pricing">
   <div class="container">
     <div class="section-label">Pricing</div>
     <div class="section-title">One price. Everything included.</div>
-    <div class="section-desc" style="margin: 0 auto 40px;">No tiers, no per-feature upsells, no surprise charges.</div>
+    <p class="price-anchor">Most mortgage CRMs cost <strong>$99-299/month</strong> and still let leads slip. LeadBuddy costs less than a single lost commission and actually gets used.</p>
 
     <div class="price-card">
       <div class="price-amount">$49 <span>/month</span></div>
@@ -583,10 +699,13 @@
         <li>Automatic "going cold" alerts</li>
         <li>Pipeline overview on demand</li>
         <li>Follow-up date enforcement (no lead forgotten)</li>
-        <li>Contact deduplication</li>
+        <li>Mortgage-specific pipeline stages</li>
       </ul>
-      <a href="https://t.me/LeadBuddyBot" class="price-cta">Start Your 14-Day Free Trial</a>
-      <div class="price-guarantee">No credit card required. Cancel anytime.</div>
+      <a href="https://t.me/LeadBuddyBot" class="price-cta">Start My 14-Day Free Trial</a>
+      <div class="price-guarantee">No credit card required. Setup takes 60 seconds.</div>
+      <div style="text-align:center;">
+        <div class="guarantee-badge">30-day money-back guarantee, no questions asked</div>
+      </div>
     </div>
   </div>
 </section>
@@ -600,27 +719,27 @@
     <div class="faq-grid">
       <div class="faq-item">
         <h3>Why Telegram and not a regular app?</h3>
-        <p>Because you don't need another app. Telegram is free, fast, and works everywhere. Your pipeline manager should live where your conversations already are, not behind another login.</p>
+        <p>You don't need another app to learn. Telegram is free, fast, and works on every phone. Your pipeline manager should live where your conversations already are, not behind another login screen.</p>
       </div>
       <div class="faq-item">
-        <h3>Can I send it screenshots of texts and emails?</h3>
-        <p>Yes. Send a screenshot of a Zillow notification, a text conversation, an email, or even a photo of a business card. LeadBuddy's AI extracts the name, phone, email, and context automatically.</p>
+        <h3>Can I send screenshots of texts and emails?</h3>
+        <p>Yes. Zillow notifications, text conversations, emails, business cards. LeadBuddy's AI reads the image and extracts the name, phone, email, and context. You just confirm and set a follow-up date.</p>
       </div>
       <div class="faq-item">
         <h3>What if I already have a CRM?</h3>
-        <p>LeadBuddy works alongside your existing CRM or replaces it entirely. Most LOs use it because their "real" CRM is too complex to update on the go. This is the one you'll actually use.</p>
+        <p>Most LOs use LeadBuddy because their "real" CRM is too complex to update between appointments. Run them side by side, or replace the one you never open. This is the CRM you'll actually use.</p>
       </div>
       <div class="faq-item">
         <h3>Is my data secure?</h3>
-        <p>Yes. Each user's data is fully isolated with row-level security. Your leads are only visible to you. We never share or sell your data.</p>
+        <p>Yes. 256-bit encryption, row-level data isolation (your leads are invisible to everyone else), and we never share or sell your data. Built with mortgage compliance in mind.</p>
       </div>
       <div class="faq-item">
-        <h3>How is this different from just using a spreadsheet?</h3>
-        <p>Spreadsheets don't remind you to follow up. They don't extract contact info from screenshots. They don't send you a morning briefing. LeadBuddy is the system that makes sure nothing slips.</p>
+        <h3>How is this different from a spreadsheet?</h3>
+        <p>Spreadsheets don't remind you to follow up. They don't extract contacts from screenshots. They don't send morning briefings. LeadBuddy is the system that makes sure no lead slips through.</p>
       </div>
       <div class="faq-item">
-        <h3>Can I use it for my team?</h3>
-        <p>Right now LeadBuddy is built for individual loan officers. Team features (shared pipeline, lead routing) are coming soon.</p>
+        <h3>What if I'm not tech-savvy?</h3>
+        <p>If you can send a text message, you can use LeadBuddy. There's no setup screen, no training, no admin panel. You text the bot, it tracks your leads. That's the whole product.</p>
       </div>
     </div>
   </div>
@@ -630,18 +749,24 @@
 <section class="final-cta">
   <div class="container">
     <h2>Every missed follow-up is a $4,000 mistake</h2>
-    <p>LeadBuddy costs less than a single lost commission. Start tracking every lead in 60 seconds.</p>
-    <a href="https://t.me/LeadBuddyBot" class="hero-cta">Start Your Free Trial</a>
-    <div class="hero-sub">14-day free trial. No credit card required.</div>
+    <p>LeadBuddy costs less than one lost commission. Start tracking every lead in 60 seconds.</p>
+    <a href="https://t.me/LeadBuddyBot" class="hero-cta">Start My 14-Day Free Trial</a>
+    <div class="hero-sub">Free for 14 days. No credit card. Cancel anytime.</div>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
   <div class="container">
-    <p>LeadBuddy. Built for loan officers who close deals, not fill out forms.</p>
+    <p>LeadBuddy by UpLevel Automations. Built for loan officers who close deals, not fill out forms.</p>
   </div>
 </footer>
+
+<!-- MOBILE STICKY CTA -->
+<div class="mobile-sticky">
+  <a href="#pricing">Start My Free Trial</a>
+  <div class="sticky-sub">14 days free. No credit card.</div>
+</div>
 
 </body>
 </html>

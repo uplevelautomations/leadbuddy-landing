@@ -54,6 +54,7 @@
       text-decoration: none; transition: opacity 0.2s;
     }
     .nav-cta:hover { opacity: 0.9; }
+    @media (max-width: 768px) { .nav-cta { display: none; } }
 
     /* ── HERO ── */
     .hero {
@@ -415,7 +416,8 @@
       text-align: center; font-size: 11px; color: var(--text-muted); margin-top: 4px;
     }
     @media (max-width: 768px) {
-      .mobile-sticky { display: block; }
+      .mobile-sticky { display: block; opacity: 0; pointer-events: none; transition: opacity 0.3s; }
+      .mobile-sticky.visible { opacity: 1; pointer-events: auto; }
       footer { padding-bottom: 100px; }
     }
 
@@ -448,7 +450,7 @@
     <div class="hero-badge">Built for Mortgage Loan Officers</div>
     <h1>Stop losing leads.<br><span class="highlight">Start closing more loans.</span></h1>
     <p>LeadBuddy tracks every lead, enforces every follow-up, and sends you a morning briefing. All from Telegram. No desktop. No learning curve. Just text.</p>
-    <a href="#pricing" class="hero-cta">Start My 14-Day Free Trial</a>
+    <a href="#pricing" class="hero-cta" id="hero-cta">Start My 14-Day Free Trial</a>
     <div class="hero-sub">Free for 14 days. No credit card. Setup takes 60 seconds.</div>
 
     <!-- ABOVE-FOLD SOCIAL PROOF -->
@@ -768,5 +770,16 @@
   <div class="sticky-sub">14 days free. No credit card.</div>
 </div>
 
+<script>
+// Show mobile sticky CTA only after hero CTA scrolls out of view
+const heroCta = document.getElementById('hero-cta');
+const sticky = document.querySelector('.mobile-sticky');
+if (heroCta && sticky) {
+  const obs = new IntersectionObserver(([e]) => {
+    sticky.classList.toggle('visible', !e.isIntersecting);
+  }, { threshold: 0 });
+  obs.observe(heroCta);
+}
+</script>
 </body>
 </html>
